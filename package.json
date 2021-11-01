@@ -1,0 +1,16 @@
+{
+  "name": "rxjs-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Petrov Kirill <ottokirik@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
+  },
+  "scripts": {
+    "start:canvas": "parcel ./canvas/index.html"
+  }
+}
