@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start:canvas": "parcel ./canvas/index.html",
-    "start:search": "parcel ./github_search/index.html"
+    "start:search": "parcel ./github_search/index.html",
+    "start:redux": "parcel ./mini_redux/index.html"
   }
 }
