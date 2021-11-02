@@ -11,6 +11,7 @@
     "parcel": "^2.0.0"
   },
   "scripts": {
-    "start:canvas": "parcel ./canvas/index.html"
+    "start:canvas": "parcel ./canvas/index.html",
+    "start:search": "parcel ./github_search/index.html"
   }
 }
