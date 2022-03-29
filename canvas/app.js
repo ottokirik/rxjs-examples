@@ -36,7 +36,7 @@ const streamsObj$ = eventsForStream.reduce((acc, event) => {
   return { ...acc, [event]: fromEventWithCanvas(event) };
 }, {});
 
-// Стримы для отслеживания имзенения толщины линии и цвета
+// Стримы для отслеживания изменения толщины линии и цвета
 const lineWidth$ = createInputStream(range);
 const color$ = createInputStream(color);
 
@@ -51,7 +51,7 @@ const paintStream$ = streamsObj$['mousedown'].pipe(
     return streamsObj$['mousemove'].pipe(
       map((event) => ({ x: event.offsetX, y: event.offsetY, options })),
       pairwise(), // Объединяет предыдущее значение стрима и текущее, массив
-      // Рисуем пока не начался другой стрим, в данном случае не отжата кнопака мыши или указатель не вышел за пределы канваса
+      // Рисуем пока не начался другой стрим, в данном случае не отжата кнопка мыши или указатель не вышел за пределы канваса
       takeUntil(streamsObj$['mouseup']),
       takeUntil(streamsObj$['mouseout'])
     );
